@@ -241,7 +241,9 @@ var SC_PAGE_LIMIT = 25;
     this.itemClicked = function(track) {
       if (!scWidget) {
         $scope.scUrl = location.protocol + "//w.soundcloud.com/player/?url=" + track.permalink_url;
-        scWidget = SC.Widget('soundcloud');
+
+        // We have to do this outside of the Angular event loop, otherwise things get wonky.
+        setTimeout(function() { scWidget = SC.Widget('soundcloud'); }, 1);
       } else {
         scWidget.load(track.permalink_url, { auto_play: true });
       }
@@ -250,6 +252,7 @@ var SC_PAGE_LIMIT = 25;
     this.startClicked = function() {
       var self = this;
 
+      // TODO: someone invent a way to effectively loop promises.
       SCLoader.init()
       .then(function() {
         console.log('Initialized Soundcloud.');
