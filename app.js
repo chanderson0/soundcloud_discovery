@@ -79,8 +79,8 @@ var SC_PAGE_LIMIT = 25;
           });
         } else {
           SC.initialize({
-            client_id: "1d0495ba432e7d5bc8f0ddc599216c62",
-            redirect_uri: "http://chanderson0.github.com/soundcloud_disco/callback.html",
+            client_id: "3c2bd4f751f45aca66269a1b1530ca3f",
+            redirect_uri: "http://chanderson0.github.io/soundcloud_discovery/callback.html",
           });
         }
 
