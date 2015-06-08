@@ -106,7 +106,7 @@ h4 {
 }
 
 .track-item {
-  height: 75px;
+  min-height: 75px;
   padding: 3px;
   clear: both;
 }
