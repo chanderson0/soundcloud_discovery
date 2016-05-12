@@ -103,7 +103,7 @@ var SC_PAGE_LIMIT = 25;
             var trackData = activity.origin;
 
             // We don't handle playlist posts yet.
-            if (trackData.kind != 'track') return;
+            if (!trackData || trackData.kind != 'track') return;
 
             // Check for dupes;
             if (trackCache[trackData.permalink_url]) return;
