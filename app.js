@@ -80,7 +80,7 @@ var SC_PAGE_LIMIT = 25;
         } else {
           SC.initialize({
             client_id: "3c2bd4f751f45aca66269a1b1530ca3f",
-            redirect_uri: "http://chanderson0.github.io/soundcloud_discovery/callback.html",
+            redirect_uri: "https://chanderson0.github.io/soundcloud_discovery/callback.html",
           });
         }
 
